@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, pkgs-stable, ...}: {
   home.packages = with pkgs; [
     fastfetch
 
@@ -43,7 +43,7 @@
     nix-output-monitor
     nh
     direnv
-    colmena
+    pkgs-stable.colmena
 
     traceroute
     rclone
