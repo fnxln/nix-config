@@ -20,6 +20,7 @@
       "modules/server"
       "modules/hyprland"
       "modules/nvidia"
+      "modules/vpn"
       "modules/desktop"
 
       # host specific
@@ -30,7 +31,6 @@
       "home/base/home.nix"
       "home/base/tui"
       "home/base/core"
-      "home/base/core/editors"
       "home/base/core/shells"
 
       "home/base/gui"

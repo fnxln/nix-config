@@ -1,3 +1,0 @@
-
-{nvchad4nix,pkgs,  ...}: {
-}

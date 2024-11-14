@@ -22,7 +22,6 @@ let
     home-modules = map mylib.relativeToRoot [
       "home/base/home.nix"
       "home/base/tui"
-      "home/base/core/editors"
       "home/base/core/shells"
     ];
   };

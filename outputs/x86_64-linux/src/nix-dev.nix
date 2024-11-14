@@ -26,7 +26,6 @@
       "home/base/home.nix"
       "home/base/tui"
       "home/base/core"
-      "home/base/core/editors"
       "home/base/core/shells"
     ];
   };

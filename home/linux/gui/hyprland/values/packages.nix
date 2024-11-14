@@ -30,6 +30,7 @@
     bitwarden-cli
     parsec-bin
 
+    jetbrains-toolbox
     telegram-desktop
     kdePackages.kdeconnect-kde
     electron-mail

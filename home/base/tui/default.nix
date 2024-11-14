@@ -9,8 +9,8 @@
     nodejs
     cargo
     gcc
-    neovim
     unzip
+    neovim
     p7zip
     # networking tools
     mtr # A network diagnostic tool

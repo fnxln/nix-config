@@ -583,6 +583,22 @@
         "type": "github"
       }
     },
+    "lin-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731595046,
+        "narHash": "sha256-hKPhaEbTh99GO1iSmk9kbm8FhRM4v5VL4wBgWTF8zCY=",
+        "owner": "fnxln",
+        "repo": "lazyvim",
+        "rev": "05a9b806e9bd4ebb621815df964018c4874f6d3e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fnxln",
+        "repo": "lazyvim",
+        "type": "github"
+      }
+    },
     "nixlib": {
       "locked": {
         "lastModified": 1731200463,
@@ -626,11 +642,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1730453870,
-        "narHash": "sha256-d+kIgz4BvTXb7emjSFV3zjNydGmLUmuluQjdBb51R9o=",
+        "lastModified": 1731586452,
+        "narHash": "sha256-tXqbmtaMDW0fsaoxHroOuZ6/A3MRWIoo7Hxtb35Kn2g=",
         "owner": "nix-community",
         "repo": "NixOS-WSL",
-        "rev": "adb6bc4b661a43328752b4575be4968a4990c033",
+        "rev": "17186904d5304c9d1fcc1e85e319b19f0396d4c4",
         "type": "github"
       },
       "original": {
@@ -824,6 +840,7 @@
         "home-manager": "home-manager_2",
         "hyprland": "hyprland",
         "lanzaboote": "lanzaboote",
+        "lin-vim": "lin-vim",
         "nixos-generators": "nixos-generators",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_3",
