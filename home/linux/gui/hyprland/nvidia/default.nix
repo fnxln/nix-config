@@ -9,7 +9,8 @@
     "XDG_SESSION_TYPE,wayland"
     "GBM_BACKEND,nvidia-drm"
     "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-    # fix https://github.com/hyprwm/Hyprland/issues/1520
-    "WLR_NO_HARDWARE_CURSORS,1"
+    "NVD_BACKEND,direct"
+    "ELECTRON_OZONE_PLATFORM_HINT,auto"
   ];
+
 }
