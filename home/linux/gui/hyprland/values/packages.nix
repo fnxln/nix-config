@@ -14,6 +14,7 @@
     wl-clipboard # copying and pasting
     mpvpaper
     pulsemixer
+    feh
     hyprpicker # color picker
     alacritty
     wofi

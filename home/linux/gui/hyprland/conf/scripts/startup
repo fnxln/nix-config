@@ -25,4 +25,4 @@ done
 ~/.config/hypr/scripts/statusbar &
 
 # Start mpd
-exec mpd &
+exec swww-daemon &

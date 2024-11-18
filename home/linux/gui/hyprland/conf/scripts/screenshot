@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Define the save location in ~/Pictures with a timestamp
+SAVE_DIR="$HOME/Pictures"
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+FILENAME="$SAVE_DIR/screenshot_$TIMESTAMP.png"
+
+# Ensure the save directory exists
+mkdir -p "$SAVE_DIR"
+
+# Take a screenshot of a selected area and save it
+# Copy the screenshot to the clipboard
+slurp | grim -g - "$FILENAME" && wl-copy < "$FILENAME"
+
+if [[ $? -eq 0 ]]; then
+    echo "Screenshot saved to $FILENAME and copied to clipboard."
+else
+    echo "Failed to take a screenshot."
+fi
