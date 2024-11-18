@@ -38,6 +38,10 @@
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    swww = {
+      url = "github:LGFae/swww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     lin-vim ={
       url = "github:fnxln/lazyvim";
       flake = false;

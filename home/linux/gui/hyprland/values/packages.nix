@@ -2,6 +2,7 @@
   pkgs,
   pkgs-unstable,
   pkgs-stable,
+  swww,
   ...
 }: {
   home.packages = with pkgs; [
@@ -17,6 +18,7 @@
     alacritty
     wofi
     localsend
+    swww.packages.${pkgs.system}.swww
     pkgs-stable.neovide
     vesktop
     flameshot
