@@ -17,7 +17,7 @@
     alacritty
     wofi
     localsend
-    brave
+    pkgs-stable.neovide
     vesktop
     flameshot
     ledger-live-desktop
@@ -34,6 +34,8 @@
     telegram-desktop
     kdePackages.kdeconnect-kde
     electron-mail
+    megasync
+    mullvad-vpn
     obsidian
     cliphist
     freerdp3
