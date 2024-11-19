@@ -20,7 +20,7 @@
     isNormalUser = true;
     home = "/home/lin";
     description = "Lin Vieira";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "openrazer" ];
   };
 
 

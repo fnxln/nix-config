@@ -22,6 +22,7 @@
       "modules/nvidia"
       "modules/vpn"
       "modules/desktop"
+      "modules/hardware/razer.nix"
 
       # host specific
       "hosts/main"
