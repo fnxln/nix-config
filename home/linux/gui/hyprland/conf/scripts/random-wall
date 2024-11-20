@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Directory containing wallpapers
+WALLPAPER_DIR="$HOME/Pictures/wall"
+
+# List all image files in the directory
+IMAGES=("$WALLPAPER_DIR"/*)
+
+# Check if the directory contains any images
+if [ ${#IMAGES[@]} -eq 0 ]; then
+	echo "No images found in $WALLPAPER_DIR"
+	exit 1
+fi
+
+# Randomly select an image
+RANDOM_IMAGE="${IMAGES[RANDOM % ${#IMAGES[@]}]}"
+
+# Define an array of transition effects
+TRANSITIONS=("fade" "grow" "inner" "outer" "blur")
+
+# Randomly select a transition effect
+RANDOM_TRANSITION="${TRANSITIONS[RANDOM % ${#TRANSITIONS[@]}]}"
+
+# Set the selected wallpaper with the random transition
+swww img "$RANDOM_IMAGE" --transition-type random
+
+echo "Wallpaper set to $RANDOM_IMAGE with transition effect: $RANDOM_TRANSITION"
