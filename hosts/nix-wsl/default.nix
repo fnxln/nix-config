@@ -20,7 +20,7 @@
     isNormalUser = true;
     home = "/home/lin";
     description = "Lin Vieira";
-    extraGroups = [ "wheel" "openrazer" ];
+    extraGroups = [ "wheel" "openrazer" "libvirtd" ];
   };
 
 
@@ -31,7 +31,6 @@
       wget
       curl
       nixfmt
-      neovim
       colmena
       nushell
     ];

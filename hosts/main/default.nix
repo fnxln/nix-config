@@ -14,7 +14,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "main"; # Define your hostname.
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }
 

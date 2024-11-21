@@ -5,12 +5,12 @@
     # archives
     zip
     xz
-    lunarvim
+    # lunarvim
+    neovim
     nodejs
     cargo
     gcc
     unzip
-    neovim
     p7zip
     # networking tools
     mtr # A network diagnostic tool

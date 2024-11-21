@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  pkgs-stable,
   swww,
   ...
 }: {
@@ -19,8 +18,11 @@
     alacritty
     wofi
     localsend
+    virt-manager
     swww.packages.${pkgs.system}.swww
-    pkgs-stable.neovide
+    neovide
+    firefox
+    pcmanfm
     vesktop
     flameshot
     ledger-live-desktop
