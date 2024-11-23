@@ -22,6 +22,8 @@
     swww.packages.${pkgs.system}.swww
     neovide
     firefox
+    scrcpy
+    android-tools
     pcmanfm
     vesktop
     flameshot
