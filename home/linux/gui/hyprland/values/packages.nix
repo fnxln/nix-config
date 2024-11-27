@@ -23,8 +23,10 @@
     neovide
     firefox
     scrcpy
-    android-tools
-    pcmanfm
+    cmake
+    meson
+    cpio
+    android-tools pcmanfm
     vesktop
     flameshot
     ledger-live-desktop

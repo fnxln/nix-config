@@ -1,9 +1,12 @@
 { pkgs
 , lib
+,  hyprland
+, hyprland-plugins
 , ...
 }:
 let
-  package = pkgs.hyprland;
+ package =  hyprland.packages.${pkgs.system}.default;
+
 in
 {
   # NOTE:
@@ -14,11 +17,14 @@ in
     inherit package;
     enable = true;
     extraConfig = builtins.readFile ../conf/hyprland.conf;
-    # gammastep/wallpaper-switcher need this to be enabled.
     systemd = {
       enable = true;
       variables = [ "--all" ];
     };
+    plugins = with hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
+      hyprbars
+      hyprexpo
+    ];
   };
 
   # NOTE: this executable is used by greetd to start a wayland session when system boot up
