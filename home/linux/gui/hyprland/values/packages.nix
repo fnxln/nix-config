@@ -24,7 +24,6 @@
     virt-manager
     swww.packages.${pkgs.system}.swww
     neovide
-    firefox
     scrcpy
     cmake
     meson
