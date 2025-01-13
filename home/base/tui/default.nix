@@ -18,6 +18,10 @@
     gcc
     unzip
     lin-vim.packages.${pkgs.system}.default
+    golangci-lint
+    golangci-lint-langserver
+    gopls
+
     p7zip
     # networking tools
     mtr # A network diagnostic tool
