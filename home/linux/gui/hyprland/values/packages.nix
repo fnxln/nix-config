@@ -3,7 +3,8 @@
   pkgs-unstable,
   swww,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     waybar # the status bar
     swaybg # the wallpaper
@@ -27,8 +28,9 @@
     cmake
     meson
     cpio
-    android-tools pcmanfm
-(discord-canary.override {
+    android-tools
+    pcmanfm
+    (discord-canary.override {
       withOpenASAR = true;
       withVencord = true; # can do this here too
     })

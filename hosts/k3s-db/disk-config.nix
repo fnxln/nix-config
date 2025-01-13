@@ -41,7 +41,10 @@
                   "/home/user" = { };
                   # Parent is not mounted so the mountpoint must be set
                   "/nix" = {
-                    mountOptions = [ "compress=zstd" "noatime" ];
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
                     mountpoint = "/nix";
                   };
                   # This subvolume will be created but not mounted
@@ -49,37 +52,34 @@
                   # Subvolume for the swapfile
                 };
 
-
-             };
-            };
-          };
-        };
-      };
-    data = {
-      type = "disk";
-      device = "/dev/vdb";
-      content = {
-        type = "gpt";
-        partitions ={
-          data = {
-            size = "100%";
-            content = {
-              type = "btrfs";
-              extraArgs = [ "-f" ]; # Override existing partition
-              subvolumes = {
-                "/data" = {
-                  mountpoint = "/data";
-                };
               };
             };
           };
         };
+      };
+      data = {
+        type = "disk";
+        device = "/dev/vdb";
+        content = {
+          type = "gpt";
+          partitions = {
+            data = {
+              size = "100%";
+              content = {
+                type = "btrfs";
+                extraArgs = [ "-f" ]; # Override existing partition
+                subvolumes = {
+                  "/data" = {
+                    mountpoint = "/data";
+                  };
+                };
+              };
+            };
+          };
+
+        };
 
       };
-
-      
     };
   };
-  };
 }
-

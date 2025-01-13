@@ -1,9 +1,10 @@
-{ pkgs
-, config
-, lib
-, anyrun
-, ...
-} @ args:
+{
+  pkgs,
+  config,
+  lib,
+  anyrun,
+  ...
+}@args:
 {
   imports = [ ./values ];
   home.file.".config/hypr" = {

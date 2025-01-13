@@ -1,11 +1,12 @@
-{ pkgs
-, lib
-,  hyprland
-, hyprland-plugins
-, ...
+{
+  pkgs,
+  lib,
+  hyprland,
+  hyprland-plugins,
+  ...
 }:
 let
- package =  hyprland.packages.${pkgs.system}.default;
+  package = hyprland.packages.${pkgs.system}.default;
 
 in
 {

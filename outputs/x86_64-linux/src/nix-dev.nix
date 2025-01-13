@@ -9,9 +9,10 @@
   system,
   genSpecialArgs,
   ...
-} @ args: let
+}@args:
+let
   name = "nix-dev";
-  tags = [name];
+  tags = [ name ];
   ssh-user = "root";
   base-modules = {
     nixos-modules = map mylib.relativeToRoot [
@@ -29,6 +30,7 @@
       "home/base/core/shells"
     ];
   };
-in {
+in
+{
   nixosConfigurations.${name} = mylib.nixosSystem (base-modules // args);
 }

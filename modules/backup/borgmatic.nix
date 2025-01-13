@@ -1,3 +1,4 @@
-{ ... }: { 
+{ ... }:
+{
   # TODO: Add borgmatic configuration
 }

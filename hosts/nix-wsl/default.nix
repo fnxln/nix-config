@@ -1,4 +1,12 @@
-{ config, lib, pkgs, args, vscode-server, nixos-wsl, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  args,
+  vscode-server,
+  nixos-wsl,
+  ...
+}:
 
 {
 
@@ -12,7 +20,10 @@
 
   services.vscode-server.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "nix-wsl";
@@ -20,20 +31,21 @@
     isNormalUser = true;
     home = "/home/lin";
     description = "Lin Vieira";
-    extraGroups = [ "wheel" "openrazer" "libvirtd" ];
+    extraGroups = [
+      "wheel"
+      "openrazer"
+      "libvirtd"
+    ];
   };
 
-
-  environment.systemPackages = with pkgs;
-    [
-      git
-      nh
-      wget
-      curl
-      nixfmt
-      colmena
-      nushell
-    ];
+  environment.systemPackages = with pkgs; [
+    git
+    nh
+    wget
+    curl
+    colmena
+    nushell
+  ];
 
   programs.nix-ld = {
     enable = true;

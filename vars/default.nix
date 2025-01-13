@@ -1,4 +1,5 @@
-{ lib }: {
+{ lib }:
+{
   username = "lin";
   userfullname = "Lin Vieira";
   useremail = "lin@fnxln.com";

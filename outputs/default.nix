@@ -1,7 +1,8 @@
-{ self
-, nixpkgs
-, ...
-} @ inputs:
+{
+  self,
+  nixpkgs,
+  ...
+}@inputs:
 let
   inherit (inputs.nixpkgs) lib;
   mylib = import ../lib { inherit lib; };
@@ -9,7 +10,8 @@ let
 
   # Add my custom lib, vars, nixpkgs instance, and all the inputs to specialArgs,
   # so that I can use them in all my nixos/home-manager/darwin modules.
-  genSpecialArgs = system:
+  genSpecialArgs =
+    system:
     inputs
     // {
       inherit mylib myvars;
@@ -28,7 +30,15 @@ let
     };
 
   # This is the args for all the haumea modules in this folder.
-  args = { inherit inputs lib mylib myvars genSpecialArgs; };
+  args = {
+    inherit
+      inputs
+      lib
+      mylib
+      myvars
+      genSpecialArgs
+      ;
+  };
 
   # modules for each supported system
   nixosSystems = {
@@ -49,34 +59,35 @@ in
   debugAttrs = { inherit nixosSystems allSystems allSystemNames; };
 
   # NixOS Hosts
-  nixosConfigurations =
-    lib.attrsets.mergeAttrsList (map (it: it.nixosConfigurations or { }) nixosSystemValues);
+  nixosConfigurations = lib.attrsets.mergeAttrsList (
+    map (it: it.nixosConfigurations or { }) nixosSystemValues
+  );
 
   # Colmena - remote deployment via SSH
-  colmena =
-    {
-      meta =
-        (
-          let
-            system = "x86_64-linux";
-          in
-          {
-            # colmena's default nixpkgs & specialArgs
-            nixpkgs = import nixpkgs { inherit system; };
-            specialArgs = genSpecialArgs system;
-          }
-        )
-        // {
-          # per-node nixpkgs & specialArgs
-          nodeNixpkgs = lib.attrsets.mergeAttrsList (map (it: it.colmenaMeta.nodeNixpkgs or { }) nixosSystemValues);
-          nodeSpecialArgs = lib.attrsets.mergeAttrsList (map (it: it.colmenaMeta.nodeSpecialArgs or { }) nixosSystemValues);
-        };
-    }
-    // lib.attrsets.mergeAttrsList (map (it: it.colmena or { }) nixosSystemValues);
+  colmena = {
+    meta =
+      (
+        let
+          system = "x86_64-linux";
+        in
+        {
+          # colmena's default nixpkgs & specialArgs
+          nixpkgs = import nixpkgs { inherit system; };
+          specialArgs = genSpecialArgs system;
+        }
+      )
+      // {
+        # per-node nixpkgs & specialArgs
+        nodeNixpkgs = lib.attrsets.mergeAttrsList (
+          map (it: it.colmenaMeta.nodeNixpkgs or { }) nixosSystemValues
+        );
+        nodeSpecialArgs = lib.attrsets.mergeAttrsList (
+          map (it: it.colmenaMeta.nodeSpecialArgs or { }) nixosSystemValues
+        );
+      };
+  } // lib.attrsets.mergeAttrsList (map (it: it.colmena or { }) nixosSystemValues);
 
   # Packages
-  packages = forAllSystems (
-    system: allSystems.${system}.packages or { }
-  );
+  packages = forAllSystems (system: allSystems.${system}.packages or { });
 
 }

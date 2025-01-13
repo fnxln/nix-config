@@ -1,6 +1,13 @@
-{pkgs, pkgs-stable, lin-vim, ...}: {
+{
+  pkgs,
+  pkgs-stable,
+  lin-vim,
+  ...
+}:
+{
   home.packages = with pkgs; [
     fastfetch
+    nixfmt-rfc-style
 
     # archives
     zip
@@ -21,11 +28,12 @@
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
     ipcalc # it is a calculator for the IPv4/v6 addresses
-    rustc 
+    rustc
     jdk
     openapi-generator-cli
     cargo
     lazygit
+    statix
 
     # misc
     devenv

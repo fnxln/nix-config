@@ -9,9 +9,10 @@
   system,
   genSpecialArgs,
   ...
-} @ args: let
+}@args:
+let
   name = "main";
-  tags = [name];
+  tags = [ name ];
   ssh-user = "root";
   base-modules = {
     nixos-modules = map mylib.relativeToRoot [
@@ -39,6 +40,7 @@
       "home/linux/gui/hyprland/nvidia"
     ];
   };
-in {
+in
+{
   nixosConfigurations.${name} = mylib.nixosSystem (base-modules // args);
 }

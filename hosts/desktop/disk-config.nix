@@ -38,7 +38,10 @@
                   };
                   # Parent is not mounted so the mountpoint must be set
                   "/nix" = {
-                    mountOptions = [ "compress=zstd" "noatime" ];
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
                     mountpoint = "/nix";
                   };
                   # Subvolume for the swapfile
@@ -52,4 +55,3 @@
     };
   };
 }
-

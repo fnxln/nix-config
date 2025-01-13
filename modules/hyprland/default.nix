@@ -2,7 +2,8 @@
   pkgs,
   hyprland,
   ...
-}: {
+}:
+{
   programs.hyprland = {
     package = hyprland.packages.${pkgs.system}.hyprland;
     portalPackage = hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;

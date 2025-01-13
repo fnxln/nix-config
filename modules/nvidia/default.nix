@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
 
   hardware.graphics = {
     enable = true;
@@ -10,6 +11,5 @@
     open = false;
     nvidiaSettings = true;
   };
-
 
 }

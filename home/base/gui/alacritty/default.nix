@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.alacritty = {
     enable = true;
   };
@@ -7,4 +8,4 @@
     recursive = true;
   };
 
-} 
+}

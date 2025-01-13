@@ -9,9 +9,10 @@
   system,
   genSpecialArgs,
   ...
-} @ args: let
+}@args:
+let
   name = "k3s-db";
-  tags = [name];
+  tags = [ name ];
   ssh-user = "root";
   base-modules = {
     nixos-modules = map mylib.relativeToRoot [
@@ -30,8 +31,8 @@
       "home/base/core/shells"
     ];
   };
-in {
+in
+{
   nixosConfigurations.${name} = mylib.nixosSystem (base-modules // args);
-  colmena.${name} =
-    mylib.colmenaSystem (base-modules // args // { inherit tags ssh-user; });
-}  
+  colmena.${name} = mylib.colmenaSystem (base-modules // args // { inherit tags ssh-user; });
+}
