@@ -20,6 +20,7 @@
     alacritty
     wofi
     localsend
+    wezterm
     virt-manager
     swww.packages.${pkgs.system}.swww
     neovide
