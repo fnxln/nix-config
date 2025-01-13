@@ -1,4 +1,4 @@
-{pkgs, pkgs-stable, ...}: {
+{pkgs, pkgs-stable, lin-vim, ...}: {
   home.packages = with pkgs; [
     fastfetch
 
@@ -6,11 +6,11 @@
     zip
     xz
     # lunarvim
-    neovim
     nodejs
     cargo
     gcc
     unzip
+    lin-vim.packages.${pkgs.system}.default
     p7zip
     # networking tools
     mtr # A network diagnostic tool

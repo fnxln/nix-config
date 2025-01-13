@@ -12,6 +12,7 @@
     wlogout # logout menu
     wl-clipboard # copying and pasting
     mpvpaper
+    winbox
     pulsemixer
     feh
     hyprpicker # color picker
@@ -27,7 +28,10 @@
     meson
     cpio
     android-tools pcmanfm
-    vesktop
+(discord-canary.override {
+      withOpenASAR = true;
+      withVencord = true; # can do this here too
+    })
     flameshot
     ledger-live-desktop
     sparrow
@@ -43,7 +47,7 @@
     telegram-desktop
     kdePackages.kdeconnect-kde
     electron-mail
-    megasync
+    #megasync
     mullvad-vpn
     obsidian
     cliphist

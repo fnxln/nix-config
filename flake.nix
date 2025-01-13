@@ -11,13 +11,13 @@
       "https://nix-gaming.cachix.org"
 
       "https://hyprland.cachix.org"
-      # "https://nixpkgs-wayland.cachix.org"
+      "https://nixpkgs-wayland.cachix.org"
     ];
     extra-trusted-public-keys = [
       "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      # "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+      "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
     ];
   };
 
@@ -33,13 +33,18 @@
       url = "github:ryan4yin/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hyprland = {
       url = "github:hyprwm/Hyprland";
     };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
-     };
+    };
     nixos-generators = {
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,9 +53,9 @@
       url = "github:LGFae/swww";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lin-vim ={
-      url = "github:fnxln/lazyvim";
-      flake = false;
+    lin-vim = {
+      url = "github:fnxln/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.1";
