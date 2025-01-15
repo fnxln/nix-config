@@ -7,6 +7,8 @@
       extensions = with firefox-addons.packages.${pkgs.system}; [
         stylus
         ublock-origin
+        bitwarden
+        multi-account-containers
       ];
     };
 

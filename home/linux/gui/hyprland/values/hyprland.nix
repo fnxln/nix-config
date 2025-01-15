@@ -22,7 +22,7 @@ in
       enable = true;
       variables = [ "--all" ];
     };
-    plugins = with hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
+    plugins = with hyprland-plugins.packages.${pkgs.system}; [
       hyprbars
       hyprexpo
     ];

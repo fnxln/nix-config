@@ -13,7 +13,7 @@
     wlogout # logout menu
     wl-clipboard # copying and pasting
     mpvpaper
-    winbox
+    winbox4
     pulsemixer
     feh
     hyprpicker # color picker
@@ -53,11 +53,10 @@
     mullvad-vpn
     obsidian
     cliphist
-    freerdp3
+    freerdp
     k9s
     talosctl
 
-    spotify
     obs-studio
 
     pkgs-unstable.hyprshot # screen shot
