@@ -32,17 +32,23 @@ let
       ++ [
         inputs.disko.nixosModules.disko
       ];
-    home-modules = map mylib.relativeToRoot [
-      "home/base/home.nix"
-      "home/base/tui"
-      "home/base/core"
-      "home/base/core/shells"
+    home-modules =
+      map mylib.relativeToRoot [
+        "home/base/home.nix"
+        "home/base/tui"
+        "home/base/core"
+        "home/base/core/shells"
 
-      "home/base/gui"
+        "home/base/gui"
 
-      "home/linux/gui/hyprland"
-      "home/linux/gui/hyprland/nvidia"
-    ];
+        "home/linux/gui/hyprland"
+        "home/linux/gui/hyprland/nvidia"
+
+        "home/linux/gui/spicetify"
+      ]
+      ++ [
+        inputs.spicetify-nix.homeManagerModules.default
+      ];
   };
 in
 {
