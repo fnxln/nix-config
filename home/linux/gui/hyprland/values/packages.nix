@@ -30,10 +30,7 @@
     cpio
     android-tools
     pcmanfm
-    (discord-canary.override {
-      withOpenASAR = true;
-      withVencord = true; # can do this here too
-    })
+
     flameshot
     ledger-live-desktop
     sparrow

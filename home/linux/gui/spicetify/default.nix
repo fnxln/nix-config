@@ -10,6 +10,8 @@ in
       enabledExtensions = with spicePkgs.extensions; [
         hidePodcasts
         shuffle # shuffle+ (special characters are sanitized out of extension names)
+        keyboardShortcut
+        beautifulLyrics
       ];
       theme = spicePkgs.themes.catppuccin;
       colorScheme = "mocha";

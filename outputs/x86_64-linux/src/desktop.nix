@@ -23,6 +23,7 @@ let
         "modules/hyprland"
         "modules/nvidia"
         "modules/vpn"
+
         "modules/desktop"
         "modules/hardware/razer.nix"
 
@@ -45,9 +46,11 @@ let
         "home/linux/gui/hyprland/nvidia"
 
         "home/linux/gui/spicetify"
+        "home/linux/gui/discord"
       ]
       ++ [
         inputs.spicetify-nix.homeManagerModules.default
+        inputs.nixcord.homeManagerModules.nixcord
       ];
   };
 in
