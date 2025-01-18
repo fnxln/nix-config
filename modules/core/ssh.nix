@@ -1,5 +1,8 @@
-{ ... }:
+{ myvars, ... }:
 {
 
-  services.openssh.enable = true;
+  services.openssh = {
+    authorizedKeysFiles = myvars.sshAuthorizedKeys;
+    enable = true;
+  };
 }

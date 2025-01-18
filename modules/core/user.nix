@@ -1,7 +1,8 @@
-{ pkgs, ... }:
+{ myvars, pkgs, ... }:
 {
   users.users.lin = {
     isNormalUser = true;
+    initialHashedPassword = myvars.initialHashedPassword;
     extraGroups = [
       "wheel"
       "openrazer"

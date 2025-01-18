@@ -968,11 +968,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1737069806,
-        "narHash": "sha256-2ZSVWSh9TNZUM5NtysN11VSNz4N5rKysdnvwkt2Mdg8=",
+        "lastModified": 1737158242,
+        "narHash": "sha256-kznXKmKKX0fCL7EvtmHa2NRFFgbYGNjxZygsuAQaRrs=",
         "owner": "fnxln",
         "repo": "nixvim",
-        "rev": "dc86c51f3bfa71c05198664113b10d75741f909b",
+        "rev": "c957d963f14b2f7a028a3f82f8b68111480bb43b",
         "type": "github"
       },
       "original": {

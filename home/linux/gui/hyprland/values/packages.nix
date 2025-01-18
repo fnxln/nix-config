@@ -14,6 +14,7 @@
     wl-clipboard # copying and pasting
     mpvpaper
     winbox4
+    megasync
     pulsemixer
     feh
     hyprpicker # color picker
