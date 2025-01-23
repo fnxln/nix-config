@@ -22,9 +22,11 @@ let
         "modules/server"
         "modules/hyprland"
         "modules/nvidia"
+        "modules/nvidia/container.nix"
         "modules/vpn"
 
         "modules/desktop"
+        "modules/desktop/bluetooh.nix"
         "modules/hardware/razer.nix"
 
         # host specific

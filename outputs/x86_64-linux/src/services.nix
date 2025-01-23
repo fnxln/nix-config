@@ -22,6 +22,9 @@ let
         "modules/server"
         # host specific
         "hosts/services"
+        "modules/services/postgres.nix"
+        "modules/services/caddy.nix"
+        "modules/services/vaultwarden.nix"
       ]
       ++ [
         inputs.disko.nixosModules.disko
