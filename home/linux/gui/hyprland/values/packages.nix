@@ -15,6 +15,7 @@
     mpvpaper
     winbox4
     megasync
+    cura
     pulsemixer
     feh
     hyprpicker # color picker
@@ -36,7 +37,7 @@
     ledger-live-desktop
     sparrow
     insomnia
-    feather
+    # feather
     kitty
     dolphin-emu
     bitwarden-desktop
