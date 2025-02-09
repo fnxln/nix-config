@@ -33,18 +33,18 @@
       url = "github:ryan4yin/ragenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-comfyui.url = "github:dyscorv/nix-comfyui";
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     hyprland = {
       url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-generators = {
       url = "github:nix-community/nixos-generators";

@@ -17,7 +17,7 @@ return {
   hide_tab_bar_if_only_one_tab = true,
 
   -- Transparência (0.0 é totalmente transparente, 1.0 é opaco)
-  window_background_opacity = 0.75,
+  window_background_opacity = 0.9,
 
   -- Cursor em bloco
   default_cursor_style = "BlinkingBlock",

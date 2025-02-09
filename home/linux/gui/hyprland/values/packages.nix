@@ -15,7 +15,6 @@
     mpvpaper
     winbox4
     megasync
-    cura
     pulsemixer
     feh
     hyprpicker # color picker
@@ -41,7 +40,6 @@
     kitty
     dolphin-emu
     bitwarden-desktop
-    bitwarden-cli
     parsec-bin
 
     jetbrains-toolbox

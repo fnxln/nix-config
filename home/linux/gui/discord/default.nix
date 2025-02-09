@@ -22,7 +22,8 @@
         messageLogger.enable = true;
         moreKaomoji.enable = true;
         noF1.enable = true;
-        noScreensharePreview.enable = true;
+        # TODO: find replacement
+        # noScreensharePreview.enable = true;
         serverInfo.enable = true;
         showHiddenChannels.enable = true;
         unlockedAvatarZoom.enable = true;
