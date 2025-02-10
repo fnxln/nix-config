@@ -112,10 +112,10 @@
     #
     #   z foo<SPACE><TAB>  # show interactive completions (zoxide v0.8.0+, bash 4.4+/fish/zsh only)
     zoxide = {
-      enable = true;
-      enableBashIntegration = true;
-      enableZshIntegration = true;
-      enableNushellIntegration = true;
+      # enable = true;
+      # enableBashIntegration = true;
+      # enableZshIntegration = true;
+      # enableNushellIntegration = true;
     };
 
     # Atuin replaces your existing shell history with a SQLite database,
