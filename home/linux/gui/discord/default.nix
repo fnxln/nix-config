@@ -2,7 +2,9 @@
 {
   programs.nixcord = {
     enable = true; # enable Nixcord. Also installs discord package
-    discord.package = pkgs.discord-canary; # set the discord package
+    discord.enable = false;
+    vestktop.enable = true;
+    vesktop.package = pkgs.discord-canary; # set the discord package
     config = {
       useQuickCss = true; # use out quickCSS
       themeLinks = [
